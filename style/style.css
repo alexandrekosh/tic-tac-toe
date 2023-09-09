@@ -1,0 +1,119 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	background-color: #4a7c59;
+	color: #faf3dd;
+	text-align: center;
+	height: 90vh;
+	display: flex;
+	justify-content: center;
+	align-items: center
+}
+
+
+.square {
+	background-color: #8fc0a9;
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+}
+.O {
+	position: relative;
+}
+.O::after {
+	content: "\1F7E2";
+	font-size: 50px;
+	line-height: 100px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+.X {
+	position: relative;
+}
+.X::after {
+	content: "\274C";
+	font-size: 50px;
+	line-height: 100px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+.restartGame {
+	background-color: #4a7c59;
+	border: 1px solid #faf3dd;
+	border-radius: 10px;
+	padding: 10px;
+	width: 200px;
+	font-size: 20px;
+	color: #faf3dd;
+	margin: 20px;
+}
+.restartGame:hover {
+	background-color: #faf3dd;
+	border: 2px solid #4a7c59;
+	color: #4a7c59;
+}
+
+#gameOver {
+	background-color: #c8d5b9bb;
+	text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+	color: #4a7c59;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	display: none;
+
+	transition: opacity 1s;
+}
+.newGame {
+	background-color: #4a7c59;
+	border: 2px solid #faf3dd;
+	border-radius: 10px;
+	padding: 10px;
+	width: 200px;
+	font-size: 20px;
+	color: #faf3dd;
+}
+.newGame:hover {
+	background-color: #faf3dd;
+	border: 2px solid #4a7c59;
+	color: #4a7c59;
+}
+
+
+@media (max-width: 370px) {
+
+	h1, #gameOver {
+		font-size: 22px;
+	}
+
+	.square {
+		width: 50px;
+		height: 50px;
+	}
+
+	.X::after, .O::after{
+		font-size: 25px;
+		line-height: 50px;
+	}
+
+	.restartGame, .newGame {
+		font-size: 12px;
+
+		padding: 8px;
+		margin: 10px;
+
+		width: 120px;
+	}
+}
